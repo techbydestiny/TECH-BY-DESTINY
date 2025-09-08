@@ -5,6 +5,8 @@ import restaurantLandingPageImage from "@/assets/images/restaurantLandingPageIma
 import appleWebsiteImage from "@/assets/images/appleWebsiteImage.png"
 import shareItImage from "@/assets/images/shareItImage.png"
 import pubbleStoreImage from "@/assets/images/pubbleStoreImage.png"
+import coffaWebsiteImage from "@/assets/images/coffaWebsiteImage.png"
+import reactTailwindLandingImage from "@/assets/images/reactTailwindLandingImage.png"
 
 import Image from 'next/image'
 
@@ -12,6 +14,7 @@ import Image from 'next/image'
 import ClickCircleIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
 import grainImage from "@/assets/images/grain.jpg"
+
 
 const frontendProjects = [
   {
@@ -23,7 +26,7 @@ const frontendProjects = [
       { title: "Helps students easily calculate and track CGPA" },
       { title: "Responsive design optimized for mobile & desktop" },
     ],
-    link: "https://github.com/techbydestiny/CGPA-APP",
+    link: "https://cgpa-seven.vercel.app",
     image: cgpaAppImage,
   },
   {
@@ -35,7 +38,7 @@ const frontendProjects = [
       { title: "Showcases menu, offers, and reservations section" },
       { title: "Optimized for smooth animations and fast load times" },
     ],
-    link: "https://github.com/techbydestiny/RESTAURANT-LANDING-PAGE",
+    link: "https://name-restaurant-landing-page.vercel.app",
     image: restaurantLandingPageImage,
   },
   {
@@ -43,14 +46,51 @@ const frontendProjects = [
     year: "2025",
     title: "Apple Website Clone",
     results: [
-      { title: "Recreated Apple’s modern homepage design using React JS, 3d JS, Gsap and Tailwind CSS " },
+      { title: "Recreated Apple’s modern homepage design using React JS, 3d JS, Gsap and Tailwind CSS" },
       { title: "Pixel-perfect layout with responsive UI" },
       { title: "Demonstrates mastery of frontend development" },
     ],
-    link: "https://github.com/techbydestiny/APPLE-WEBSITE",
+    link: "https://apple-website-nine-kappa.vercel.app",
     image: appleWebsiteImage,
   },
+  {
+    company: "Personal Project",
+    year: "2025",
+    title: "ShareIt File Sharing App (Frontend)",
+    results: [
+      { title: "Frontend for a file sharing platform built with Bootstrap JS" },
+      { title: "Clean UI for uploading and managing shared files" },
+      { title: "Fast and responsive design" },
+    ],
+    link: "https://github.com/techbydestiny/SHARE-IT",
+    image: shareItImage,
+  },
+  {
+    company: "Personal Project",
+    year: "2025",
+    title: "Coffa Coffee Shop Website",
+    results: [
+      { title: "Stylish and responsive landing page for a coffee shop brand" },
+      { title: "Built with React.js, Tailwind CSS, and GSAP for smooth animations" },
+      { title: "Includes hero, menu, about, and contact sections—fully customizable" },
+    ],
+    link: "https://coffa-website.vercel.app",
+    image: coffaWebsiteImage,
+  },
+  {
+    company: "Personal Project",
+    year: "2025",
+    title: "React Tailwind Landing Page Template",
+    results: [
+      { title: "Simple, clean landing page built with React JS and Tailwind CSS" },
+      { title: "Lightweight, fast, and easy to customize for any portfolio or business" },
+      { title: "Reusable components and responsive layout" },
+    ],
+    link: "https://react-tailwind-three-hazel.vercel.app",
+    image: reactTailwindLandingImage,
+  },
 ];
+
 
 const backendProjects = [
     {
@@ -157,13 +197,6 @@ export const BackendProjects = () => {
   );
 };
 
-export const ShopifyProjects = () => {
-  return (
-    <div>
-      {/* Add Shopify projects here */}
-    </div>
-  );
-};
 
 export const WordPressProjects = () => {
   return (
