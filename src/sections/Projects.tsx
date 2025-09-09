@@ -4,6 +4,7 @@
 import Image from "next/image"
 import {BackendProjects, FrontendProjects, WordPressProjects} from "@/components/ProjectStacks"
 import { useState } from "react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 
 export const ProjectsSection = () => {
@@ -14,12 +15,9 @@ export const ProjectsSection = () => {
     } 
   return (
      <section className="pb-16">
-           <div className="">
-             <div className="flex justify-center">
-               <p className="font-semibold uppercase tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Real-World Results</p>
-             </div>
-             <h2 className=" font-serif text-3xl text-center mt-6 md:text-5xl"> Featured Projects</h2>
-             <p className="text-white/60 mt-4 text-center md:text-lg max-w-md mx-auto lg:text-xl">See how i transfer concepts into engaging digital experiences. </p>
+           <div className="container">
+            <SectionHeader title="Featured Projects" eyebrow="Real-World Results" description="See how i transfer concepts into engaging digital experiences. "/>
+
             <div className="flex justify-center items-center w-full z-50 mt-5">
               <nav className="flex gap-1 p-0.5 text-sm md:text-base border border-white/15 rounded-full bg-white/10 backdrop:blur">
                 <a className={`nav-item cursor-pointer ${

@@ -1,8 +1,16 @@
+import Image from "next/image";
+
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import grainImage from "@/assets/images/grain.jpg";
+
+
+import { SectionHeader } from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
+
 
 const testimonials = [
   {
@@ -38,5 +46,30 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return <div className="py-16 lg:py-24">
+    <div className="container">
+      <SectionHeader
+      title="What Clients Say About Me"
+      eyebrow="Happy Clients"
+      description="Dont't just take my word for it. See what my clients have to say about my work."/>
+    </div>
+    <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div className="flex gap-8 flex-none">
+        {testimonials.map(testimonial => (
+          <Card key={testimonial.name } className="max-w-xs md:p-8 md:max-w-md">
+            <div className="flex gap-4 items-center">
+              <div className="inline-flex  items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0">
+                <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full"/>
+              </div>
+              <div>
+                <div className="font-semibold"> {testimonial.name} </div>
+                <div className="text-sm text-white/40"> {testimonial.position} </div>
+              </div>
+            </div>
+            <p className="mt-4 text-sm md:text-base md:mt-6"> {testimonial.text} </p>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </div>;
 };
