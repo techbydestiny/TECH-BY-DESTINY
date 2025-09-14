@@ -14,12 +14,14 @@ const config: Config = {
       lg: "1200px",
     },
     container: {
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-        md: "2rem",
-      },
+    center: true,
+    padding: {
+      DEFAULT: "0.75rem",
+      sm: "0.5rem",         
+      lg: "1.5rem",      
+      xl: "2rem",         
     },
+  },
     extend: {
       fontFamily: {
         sans: 'var(--font-sans)',

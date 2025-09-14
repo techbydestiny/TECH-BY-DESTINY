@@ -15,7 +15,7 @@ export const ProjectsSection = () => {
     } 
   return (
      <section className="pb-16">
-           <div className="container">
+           <div className="conatainer">
             <SectionHeader title="Featured Projects" eyebrow="Real-World Results" description="See how i transfer concepts into engaging digital experiences. "/>
 
             <div className="flex justify-center items-center w-full z-50 mt-5">
