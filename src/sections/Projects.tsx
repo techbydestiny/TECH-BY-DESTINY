@@ -14,7 +14,7 @@ export const ProjectsSection = () => {
      setProjectClick(clicked)
     } 
   return (
-     <section className="pb-16">
+     <section className="pb-16" id="Projects">
            <div className="conatainer">
             <SectionHeader title="Featured Projects" eyebrow="Real-World Results" description="See how i transfer concepts into engaging digital experiences. "/>
 

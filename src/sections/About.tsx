@@ -19,6 +19,8 @@ import ExpressIcon from "@/assets/icons/express.svg"
 import mapImage from "@/assets/images/map.png"
 import smileImage from '@/assets/images/my-hero-image.png'
 import { ToolBoxItems } from "@/components/ToolboxItems";
+import {motion} from 'framer-motion'
+import { useRef } from "react";
 
 
 
@@ -120,6 +122,8 @@ const hobbies = [
 
 export const AboutSection = () => {
 
+  const constraintRef = useRef(null)
+
   return(
   <div className="py-20 lg:py-28" id="About">
     <div className=" container">
@@ -131,17 +135,19 @@ export const AboutSection = () => {
 
       <div className="mt-20 flex flex-col gap-8">
         <div className="md:grid md:grid-cols-5 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card className="h-[320px] col-span-2 lg:col-span-1">
+          <Card className="h-[320px] col-span-3 lg:col-span-1">
            <CardHeader 
               title="What's the Idea?" 
               description="I am a results-driven web developer with a strong focus on digital marketing and SEO." 
             /> 
 
             <div className="w-72 mx-auto"> 
-              <p>
+             <p>
                 With expertise in <strong>SEO</strong> and <strong>digital marketing</strong>, 
-                I build websites that look great and <strong>drive traffic, engagement, and conversions</strong>.
-              </p> 
+                I design and develop websites that not only look great but are also 
+                <strong>strategically optimized to drive traffic, boost engagement, and maximize conversions</strong>.
+              </p>
+
             </div>
           </Card>
           <Card className="h-[320px] col-span-3 lg:col-span-2">
@@ -165,25 +171,30 @@ export const AboutSection = () => {
               <CardHeader title="Beyond the Code"
               description=" Explore my other interest beyond coding."
               className="px-6 py-6"/>
-              <div className=" relative flex-1">
+              <div className=" relative flex-1" ref={constraintRef}>
            
                     {hobbies.map((hobby) => (
-                      <div key={hobby.title}
+                      <motion.div key={hobby.title}
                       className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-200 py-1.5 rounded-full absolute"
                       style={{
                         left: hobby.left,
                         top: hobby.top,
-                      }}>
+                      }}
+                      drag
+                      dragConstraints = {constraintRef}
+                      >
                         <span className="font-sm text-gray-950"> {hobby.title} </span>
                         <span>{hobby.emoji}</span>
-                      </div>
+                      </motion.div>
                     ))}
               </div>
            </Card>
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1" >
               <Image src={mapImage} alt="map" className="h-full w-full object-cover object-left-top"/>
               <div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-200 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:rounded-full after:outline-offset-2 after:outline-gray-950/30">
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:rounded-full after:outline-offset-2 after:outline-gray-950/30">
+                <div className=" absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                <div className=" absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image src={smileImage}
                 alt="Smile image"
                 className="size-20"/>

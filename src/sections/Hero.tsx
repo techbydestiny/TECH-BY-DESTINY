@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { FiDownload } from "react-icons/fi";
 import { TypeAnimation } from 'react-type-animation'
 
 
@@ -15,8 +16,7 @@ export const HeroSection = () => {
 
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
-        
+      <div className="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }}>
         </div>
         <div className="size-[620px] hero-ring"></div>
@@ -98,15 +98,23 @@ export const HeroSection = () => {
                 optimized performance, and results-driven strategies.
             </p>
          </div>
-        <div className="flex flex-col md:flex-row items-center mt-8 gap-4 justify-center">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Exporle My Work</span>
-            <ArrowDown />
-          </button>
-           <button className="inline-flex items-center border border-white text-gray-900 gap-3 h-12 px-6 bg-white rounded-xl">
-            <span>👋🏽</span>
-            <span className="font-semibold">Let's Connect</span>
-           </button>
+        <div className="flex flex-col md:flex-row items-center mt-8 gap-4 justify-center z-10">
+         <a  href="#Projects" 
+              className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer font-semibold"
+            >
+              Explore My Work
+              <ArrowDown />
+            </a>
+
+            <a 
+              href="/dennisdestiny-fullstactdevcv.docx" 
+              download 
+              className="inline-flex items-center border border-white text-gray-900 gap-3 h-12 px-6 bg-white rounded-xl"
+            >
+              <FiDownload className="text-xl" />
+              <span className="font-semibold">Download CV</span>
+            </a>
+
         </div>
       </div>
 
