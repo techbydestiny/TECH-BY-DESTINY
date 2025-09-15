@@ -155,8 +155,12 @@ export const FrontendProjects = () => {
   return (
     
              <div className="flex flex-col mt-10 md:mt-20 gap-16">
-               {frontendProjects.map(project  => (
-                 <Card key={project.title} className="pb-0 md:pt-12 md:px-10 px-8 pt-8">
+               {frontendProjects.map((project, projectIndex) => (
+                 <Card key={project.title} className="pb-0 md:pt-12 md:px-10 px-8 pt-8 sticky top-16" style={
+                  {
+                    top: `calc(64px + ${projectIndex * 20}px)`
+                  }
+                 }>
                    <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                        <div className='lg:pb-16'>
                          <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm gap-2 text-transparent bg-clip-text">
