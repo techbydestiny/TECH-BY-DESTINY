@@ -3,9 +3,7 @@ import Image from "next/image";
 import { Card } from "@/components/Card";
 import { CardHeader } from "@/components/CardHeader";
 import { SectionHeader } from "@/components/SectionHeader";
-import {TechIcon}  from "@/components/TechIcon";
 
-import StarIcon from "@/assets/icons/star.svg"
 import JavascriptIcon from "@/assets/icons/square-js.svg"
 import HTMLIcon from "@/assets/icons/html5.svg"
 import ReactIcons from "@/assets/icons/react.svg"
@@ -20,7 +18,6 @@ import DjangoIcon from "@/assets/icons/django.svg"
 import ExpressIcon from "@/assets/icons/express.svg"
 import mapImage from "@/assets/images/map.png"
 import smileImage from '@/assets/images/my-hero-image.png'
-import bookImage from "@/assets/images/book-cover.png"
 import { ToolBoxItems } from "@/components/ToolboxItems";
 
 
@@ -67,7 +64,7 @@ const toolboxItems = [
     iconType: DjangoIcon,
   },
    {
-    title: "Express",
+    title: "Appwrite",
     iconType: ExpressIcon,
   },
      {
@@ -124,7 +121,7 @@ const hobbies = [
 export const AboutSection = () => {
 
   return(
-  <div className="py-20 lg:py-28">
+  <div className="py-20 lg:py-28" id="About">
     <div className=" container">
       <SectionHeader
         eyebrow="About Me" 
@@ -135,12 +132,17 @@ export const AboutSection = () => {
       <div className="mt-20 flex flex-col gap-8">
         <div className="md:grid md:grid-cols-5 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <Card className="h-[320px] col-span-2 lg:col-span-1">
-            <CardHeader
-              title="Courses Taken"
-              description="Explore the Courses I have taken"
-            />
-            <div className="w-40 mx-auto mt-2 md:mt-0">
-              <Image src={bookImage} alt="book cover"/>
+           <CardHeader 
+              title="What's the Idea?" 
+              description="I am a results-driven web developer with a strong focus on digital marketing and SEO." 
+            /> 
+
+            <div className="w-72 mx-auto"> 
+              <p>
+                With proven experience in <strong>SEO optimization</strong> and <strong>digital marketing</strong>, 
+                I design and develop websites that are not only visually appealing but also 
+                <strong>built to increase traffic, engagement, and conversions</strong>.
+              </p> 
             </div>
           </Card>
           <Card className="h-[320px] col-span-3 lg:col-span-2">
@@ -151,9 +153,11 @@ export const AboutSection = () => {
             />
             <ToolBoxItems toolboxItems={toolboxItems}
               className=""
-              itemsWrapperClassName="-translate-x-1/2"
+              itemsWrapperClassName=" animate-move-left [animation-duration:30s]"
               />
-            <ToolBoxItems toolboxItems={toolboxItems} className="mt-6"/>
+            <ToolBoxItems toolboxItems={toolboxItems} className="mt-6"
+            itemsWrapperClassName=" animate-move-right [animation-duration:15s]"
+            />
           </Card>
         </div>
 
