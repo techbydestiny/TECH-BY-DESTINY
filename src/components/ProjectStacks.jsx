@@ -203,7 +203,7 @@ export const BackendProjects = () => {
   return (
          <div className="flex flex-col mt-10 md:mt-20 gap-16">
                {backendProjects.map((project, projectIndex)  => (
-                 <Card key={project.title} className="pb-0 md:pt-12 md:px-10 px-8 pt-8" style={
+                 <Card key={project.title} className="pb-0 md:pt-12 md:px-10 px-8 pt-8 sticky" style={
                   {
                     top: `calc(64px + ${projectIndex * 40}px)`
                   }
@@ -251,7 +251,7 @@ export const WordPressProjects = () => {
   return (
   <div className="flex flex-col mt-10 md:mt-20 gap-16">
                {wordpressProjects.map((project, projectIndex)  => (
-                 <Card key={project.title} className="pb-0 md:pt-12 md:px-10 px-8 pt-8"
+                 <Card key={project.title} className="pb-0 md:pt-12 md:px-10 px-8 pt-8 sticky"
                  style={
                   {
                     top: `calc(64px + ${projectIndex * 40}px)`

@@ -12,8 +12,26 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Tech By Destiny",
+  description: "Full-stack developer specializing in React, Next.js, Django, WordPress and Shopify. I build SEO-optimized, high-performing web experiences that drive traffic and conversions.",
+  applicationName: "Dennis Destiny Portfolio",
+   keywords: [
+    "Full-stack developer",
+    "React developer",
+    "Next.js developer",
+    "Django Developer",
+    "Shopify developer",
+    "SEO Expert",
+    "ecommerce developer",
+  ],
+  authors: [{ name: "Dennis Destiny" }],
+  robots: {
+    index: true,
+    follow: true,
+    'max-snippet': -1,
+    'max-image-preview': 'large',
+    'max-video-preview': -1,
+  },
 };
 
 export default function RootLayout({

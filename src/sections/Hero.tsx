@@ -109,7 +109,7 @@ export const HeroSection = () => {
             <a 
               href="/dennisdestiny-fullstactdevcv.docx" 
               download 
-              className="inline-flex items-center border border-white text-gray-900 gap-3 h-12 px-6 bg-white rounded-xl"
+              className="inline-flex items-center border border-white text-gray-900 gap-3 h-12 px-6 bg-white rounded-xl hover:scale-105 hover:bg-gray-950 hover:border-gray-950 hover:text-white duration-500 ease-in-out"
             >
               <FiDownload className="text-xl" />
               <span className="font-semibold">Download CV</span>
