@@ -139,9 +139,8 @@ export const AboutSection = () => {
 
             <div className="w-72 mx-auto"> 
               <p>
-                With proven experience in <strong>SEO optimization</strong> and <strong>digital marketing</strong>, 
-                I design and develop websites that are not only visually appealing but also 
-                <strong>built to increase traffic, engagement, and conversions</strong>.
+                With expertise in <strong>SEO</strong> and <strong>digital marketing</strong>, 
+                I build websites that look great and <strong>drive traffic, engagement, and conversions</strong>.
               </p> 
             </div>
           </Card>
