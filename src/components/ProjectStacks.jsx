@@ -177,7 +177,7 @@ export const FrontendProjects = () => {
                              </li>
                            ))}
                          </ul>
-                         <a href={project.link}>
+                         <a href={project.link}  target="_blank" rel="noopener noreferrer">
                            <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex items-center gap-2 justify-center mt-8">
                              <span className="text-sm">View Live Site</span>
                              <ArrowUpRightIcon className="size-4"/>
@@ -224,7 +224,7 @@ export const BackendProjects = () => {
                              </li>
                            ))}
                          </ul>
-                         <a href={project.link}>
+                         <a href={project.link}  target="_blank" rel="noopener noreferrer">
                            <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex items-center gap-2 justify-center mt-8">
                              <span className="text-sm">View Live Site</span>
                              <ArrowUpRightIcon className="size-4"/>
@@ -273,7 +273,7 @@ export const WordPressProjects = () => {
                              </li>
                            ))}
                          </ul>
-                         <a href={project.link}>
+                         <a href={project.link}  target="_blank" rel="noopener noreferrer">
                            <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex items-center gap-2 justify-center mt-8">
                              <span className="text-sm">View Live Site</span>
                              <ArrowUpRightIcon className="size-4"/>
