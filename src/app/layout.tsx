@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     'max-image-preview': 'large',
     'max-video-preview': -1,
   },
+    twitter: {
+    card: "summary_large_image",
+    title: "Dennis Destiny — Full-Stack Developer",
+  },
 };
 
 export default function RootLayout({
