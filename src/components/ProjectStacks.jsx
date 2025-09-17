@@ -116,7 +116,7 @@ const backendProjects = [
       { title: "Implemented authentication & secure uploads, messages" },
       { title: "Clean UI and scalable backend structure" },
     ],
-    link: "https://github.com/techbydestiny/SHARE-IT-DJANGO-VERSION",
+    link: "https://shareitwebapp.onrender.com",
     image: shareItImage,
   },
 ]
