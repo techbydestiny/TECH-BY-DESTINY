@@ -15,7 +15,6 @@ import Image from 'next/image'
 
 import ClickCircleIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
-import grainImage from "@/assets/images/grain.jpg"
 import { Card } from './Card'
 
 

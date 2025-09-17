@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import { TypeAnimation } from 'react-type-animation'
+import { motion } from "framer-motion";
 
 
 import heroimage from '@/assets/images/my-hero-image.png'
@@ -13,6 +14,22 @@ import SparkleIcon from "@/assets/icons/sparkle.svg"
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
+
+  const containers = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, 
+      delayChildren: 0.2,  
+    },
+  },
+};
+
+const showitem = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0 },
+};
 
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
@@ -91,31 +108,48 @@ export const HeroSection = () => {
                           repeat={Infinity}
                           />
             </h2>
-            <p className="text-center mt-4 text-white/60 md:text-lg">
+            <motion.p 
+            className="text-center mt-4 text-white/60 md:text-lg"
+            initial={{ opacity: 0, x: -150}}
+            whileInView={{ opacity: 1, x: 0}}
+            transition={{
+                        ease: "easeInOut",
+                        duration: 1,
+                    }}
+            viewport={{ once: false, amount: 0.1 }}
+              >
                 Full-Stack Developer and Digital Marketer with 5+ years of experience building sleek websites,
                 mobile apps, and e-commerce solutions. I specialize in React, Next.js, TailwindCSS, Django, REST APIs, Shopify, and WordPress.
                 With expertise in SEO and Social Media Marketing, I help businesses and startups grow their online presence through modern design,
                 optimized performance, and results-driven strategies.
-            </p>
+            </motion.p>
          </div>
-        <div className="flex flex-col md:flex-row items-center mt-8 gap-4 justify-center z-10">
-         <a  href="#Projects" 
-              className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer font-semibold"
-            >
+        <motion.div 
+        className="flex flex-col md:flex-row items-center mt-8 gap-4 justify-center z-10"
+        variants={containers}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+        >
+         <motion.a  
+          href="#Projects" 
+          className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer font-semibold"
+          variants={showitem}
+          >
               Explore My Work
               <ArrowDown />
-            </a>
+         </motion.a>
 
-            <a 
+          <motion.a 
               href="/dennisdestiny-fullstactdevcv.docx" 
               download 
               className="inline-flex items-center border border-white text-gray-900 gap-3 h-12 px-6 bg-white rounded-xl hover:scale-105 hover:bg-gray-950 hover:border-gray-950 hover:text-white duration-500 ease-in-out"
+              variants={showitem}
             >
               <FiDownload className="text-xl" />
               <span className="font-semibold">Download CV</span>
-            </a>
-
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
 
     </div>

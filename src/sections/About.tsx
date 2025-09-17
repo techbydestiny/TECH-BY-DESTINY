@@ -135,7 +135,14 @@ export const AboutSection = () => {
 
       <div className="mt-20 flex flex-col gap-8">
         <div className="md:grid md:grid-cols-5 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card className="h-[320px] col-span-3 lg:col-span-1">
+          <Card className="h-[320px] col-span-3 lg:col-span-1"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+                ease: "easeInOut",
+                duration: 1
+            }}
+          >
            <CardHeader 
               title="What's the Idea?" 
               description="I am a results-driven web developer with a strong focus on digital marketing and SEO." 
@@ -150,7 +157,14 @@ export const AboutSection = () => {
 
             </div>
           </Card>
-          <Card className="h-[320px] col-span-3 lg:col-span-2">
+          <Card 
+          className="h-[320px] col-span-3 lg:col-span-2"
+           initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+                ease: "easeInOut",
+                duration: 1
+            }}>
             <CardHeader
                 title="My ToolBox"
                 description="Explore the technologies and tools i use to create digital experiences."
@@ -167,7 +181,14 @@ export const AboutSection = () => {
         </div>
 
          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
-           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+                ease: "easeInOut",
+                duration: 1
+            }}
+            >
               <CardHeader title="Beyond the Code"
               description=" Explore my other interest beyond coding."
               className="px-6 py-6"/>
@@ -189,7 +210,14 @@ export const AboutSection = () => {
                     ))}
               </div>
            </Card>
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1" >
+            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1"
+             initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+                ease: "easeInOut",
+                duration: 1
+            }}
+            >
               <Image src={mapImage} alt="map" className="h-full w-full object-cover object-left-top"/>
               <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:rounded-full after:outline-offset-2 after:outline-gray-950/30">

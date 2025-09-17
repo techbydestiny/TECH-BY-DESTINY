@@ -4,12 +4,20 @@ import grainImage from "@/assets/images/grain.jpg"
 
 import { FaUser, FaEnvelope, FaRegCommentDots, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 
 export const ContactSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  return <div className="py-16 pt-12 lg:py-24 lg:pt-20" id="Contact">
+  return <motion.div className="py-16 pt-12 lg:py-24 lg:pt-20" id="Contact"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+                ease: "easeInOut",
+                duration: 1
+            }}
+      >
     <div className=" container">
       <div className="border-2 border-emerald-300 border-r-sky-200 border-t-sky-200 text-gray-300 py-8 px-10 rounded-3xl text-center relative md:text-left overflow-hidden z-0">
         <div className="absolute inset-0 opacity-5 -z-10" style={{
@@ -89,5 +97,5 @@ export const ContactSection = () => {
         </div>
       )}
 
-  </div>;
+  </motion.div>;
 };
