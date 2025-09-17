@@ -110,8 +110,8 @@ const showitem = {
             </h2>
             <motion.p 
             className="text-center mt-4 text-white/60 md:text-lg"
-            initial={{ opacity: 0, x: -150}}
-            whileInView={{ opacity: 1, x: 0}}
+            initial={{ opacity: 0, x: -150,  visibility: "hidden"}}
+            whileInView={{ opacity: 1, x: 0,  visibility: "visible"}}
             transition={{
                         ease: "easeInOut",
                         duration: 1,

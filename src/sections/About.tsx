@@ -136,8 +136,8 @@ export const AboutSection = () => {
       <div className="mt-20 flex flex-col gap-8">
         <div className="md:grid md:grid-cols-5 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <Card className="h-[320px] col-span-3 lg:col-span-1"
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -80,  visibility: "hidden"}}
+            whileInView={{ opacity: 1, x: 0,  visibility: "visible"}}
             transition={{
                 ease: "easeInOut",
                 duration: 1
@@ -159,8 +159,8 @@ export const AboutSection = () => {
           </Card>
           <Card 
           className="h-[320px] col-span-3 lg:col-span-2"
-           initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
+           initial={{ opacity: 0, x: 80,  visibility: "hidden" }}
+            whileInView={{ opacity: 1, x: 0,  visibility: "visible"}}
             transition={{
                 ease: "easeInOut",
                 duration: 1
@@ -182,11 +182,11 @@ export const AboutSection = () => {
 
          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
            <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100,  visibility: "hidden" }}
+            whileInView={{ opacity: 1, y: 0,  visibility: "visible" }}
             transition={{
                 ease: "easeInOut",
-                duration: 1
+                duration: 1,
             }}
             >
               <CardHeader title="Beyond the Code"
@@ -211,8 +211,8 @@ export const AboutSection = () => {
               </div>
            </Card>
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1"
-             initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{opacity: 0, x: 80, visibility: "hidden"}}
+            whileInView={{ opacity: 1, x: 0, visibility: "visible" }}
             transition={{
                 ease: "easeInOut",
                 duration: 1
