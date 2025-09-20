@@ -20,6 +20,8 @@ export const HeroSection = () => {
   show: {
     opacity: 1,
     transition: {
+      ease: "easeInOut",
+      duratation: 1,
       staggerChildren: 0.1, 
       delayChildren: 0.2,  
     },
@@ -110,8 +112,8 @@ const showitem = {
             </h2>
             <motion.p 
             className="text-center mt-4 text-white/60 md:text-lg"
-            initial={{ opacity: 0, x: -150,  visibility: "hidden"}}
-            whileInView={{ opacity: 1, x: 0,  visibility: "visible"}}
+            initial={{ opacity: 0, y: 100,  visibility: "hidden"}}
+            whileInView={{ opacity: 1, y: 0,  visibility: "visible"}}
             transition={{
                         ease: "easeInOut",
                         duration: 1,
@@ -125,16 +127,16 @@ const showitem = {
             </motion.p>
          </div>
         <motion.div 
-        className="flex flex-col md:flex-row items-center mt-8 gap-4 justify-center z-10"
-        variants={containers}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.3 }}
+          className="flex flex-col md:flex-row items-center mt-8 gap-4 justify-center z-10"
+          variants={containers}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.3 }}
         >
          <motion.a  
-          href="#Projects" 
-          className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer font-semibold"
-          variants={showitem}
+            href="#Projects" 
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer font-semibold"
+            variants={showitem}
           >
               Explore My Work
               <ArrowDown />
