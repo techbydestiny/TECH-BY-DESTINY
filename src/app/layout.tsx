@@ -12,7 +12,7 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Tech By Destiny",
+  title: "Tech By Destiny — Full-Stack and Ecommerce Web Developer In Nigeria",
   description: "Full-stack developer specializing in React, Next.js, Django, WordPress and Shopify. I build SEO-optimized, high-performing web experiences that drive traffic and conversions.",
   applicationName: "Dennis Destiny Portfolio",
    keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
     twitter: {
     card: "summary_large_image",
-    title: "Dennis Destiny — Full-Stack Developer",
+    title: "Dennis Destiny — Full-Stack and Ecommerce Web Developer In Nigeria",
   },
 };
 

@@ -3,12 +3,38 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
 import grainImage from "@/assets/images/grain.jpg"
 
 import { FaUser, FaEnvelope, FaRegCommentDots, FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion"
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
 
 export const ContactSection = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const form = useRef<HTMLFormElement| null>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+      )
+      .then(
+        (result: EmailJSResponseStatus) => {
+          console.log("✅ Email sent:", result.text);
+          alert("Message sent!");
+        },
+        (error: EmailJSResponseStatus) => {
+          console.error("❌ Failed:", error.text);
+          alert("Failed to send message.");
+        }
+      );
+  };
 
   return <motion.div className="py-16 pt-12 lg:py-24 lg:pt-20" id="Contact"
             initial={{ opacity: 0, y: 150 }}
@@ -19,7 +45,7 @@ export const ContactSection = () => {
             }}
       >
     <div className=" container">
-      <div className="border-2 border-emerald-300 border-r-sky-200 border-t-sky-200 text-gray-300 py-8 px-10 rounded-3xl text-center relative md:text-left overflow-hidden z-0">
+      <div className="border-2 border-purple-300 border-r-sky-200 border-t-sky-200 text-gray-300 py-8 px-10 rounded-3xl text-center relative md:text-left overflow-hidden z-0">
         <div className="absolute inset-0 opacity-5 -z-10" style={{
           backgroundImage: `url(${grainImage})`
         }}></div>
@@ -58,13 +84,14 @@ export const ContactSection = () => {
             </p>
 
             {/* Form */}
-            <form className="space-y-4">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div className="flex items-center bg-gray-800 rounded-lg px-3">
                 <FaUser className="text-gray-400" />
                 <input
                   type="text"
                   placeholder="Your Name"
                   className="w-full bg-transparent px-2 py-3 focus:outline-none text-white"
+                  name="full_name"
                 />
               </div>
 
@@ -74,6 +101,7 @@ export const ContactSection = () => {
                   type="email"
                   placeholder="Your Email"
                   className="w-full bg-transparent px-2 py-3 focus:outline-none text-white"
+                  name="full_email"
                 />
               </div>
 
@@ -83,12 +111,13 @@ export const ContactSection = () => {
                   placeholder="Your Message"
                   className="w-full bg-transparent px-2 py-3 focus:outline-none text-white"
                   rows={4}
+                  name="message"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-300 to-sky-400 text-white font-semibold py-3 rounded-lg hover:opacity-90 transition"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-300 to-sky-400 text-white font-semibold py-3 rounded-lg hover:opacity-90 transition"
               >
                 ✉️ Send Message
               </button>

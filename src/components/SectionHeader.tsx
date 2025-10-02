@@ -18,7 +18,7 @@ export const SectionHeader = ({
         <>
             <div className="flex justify-center">
                 <motion.p 
-                    className="font-semibold uppercase tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text"
+                    className="font-semibold uppercase tracking-widest bg-gradient-to-r from-purple-300 to-sky-400 text-transparent bg-clip-text"
                     initial={{ opacity: 0, y: 150, scale: 0.5 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1.05 }}
                     transition={{

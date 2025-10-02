@@ -152,7 +152,7 @@ export const AboutSection = () => {
              <p>
                 With expertise in <strong>SEO</strong> and <strong>digital marketing</strong>, 
                 I design and develop websites that not only look great but are also 
-                <strong>strategically optimized to drive traffic, boost engagement, and maximize conversions</strong>.
+                <strong> strategically optimized to drive traffic, boost engagement, and maximize conversions</strong>.
               </p>
 
             </div>
@@ -196,7 +196,7 @@ export const AboutSection = () => {
            
                     {hobbies.map((hobby) => (
                       <motion.div key={hobby.title}
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-200 py-1.5 rounded-full absolute"
+                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-purple-300 to-sky-200 py-1.5 rounded-full absolute"
                       style={{
                         left: hobby.left,
                         top: hobby.top,
@@ -221,8 +221,8 @@ export const AboutSection = () => {
               <Image src={mapImage} alt="map" className="h-full w-full object-cover object-left-top"/>
               <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:rounded-full after:outline-offset-2 after:outline-gray-950/30">
-                <div className=" absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
-                <div className=" absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
+                <div className=" absolute inset-0 rounded-full  bg-gradient-to-r from-purple-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                <div className=" absolute inset-0 rounded-full  bg-gradient-to-r from-purple-300 to-sky-400 -z-10"></div>
                 <Image src={smileImage}
                 alt="Smile image"
                 className="size-20"/>
